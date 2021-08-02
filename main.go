@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	graphalgos "github.com/piccobit/go-graph-traversing/graphalgos"
+	"github.com/piccobit/graphalgos/v2"
 )
 
 func main() {

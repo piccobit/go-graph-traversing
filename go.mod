@@ -1,6 +1,5 @@
-module main
+module go-graph-traversing
 
-require "github.com/piccobit/go-graph-traversing/graphalgos" v0.0.0
-replace "github.com/piccobit/go-graph-traversing/graphalgos" => "./graphalgos"
+require github.com/piccobit/graphalgos/v2 v2.0.2
 
 go 1.16
