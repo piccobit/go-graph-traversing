@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-    "github.com/piccobit/go-graph-traversing/graph"
+	graphalgos "github.com/piccobit/go-graph-traversing/graphalgos"
 )
 
 func main() {
@@ -13,9 +13,9 @@ func main() {
 	fmt.Println("DFS: Depth First Search")
 	fmt.Println("BFS: Breadth First Search")
 
-	g := graph.NewGraph()
+	g := graphalgos.NewGraph()
 
-    fmt.Println("\nAdding vertexes...")
+	fmt.Println("\nAdding vertexes...")
 	g.AddVertex("alpha")
 	g.AddVertex("bravo")
 	g.AddVertex("charlie")
@@ -25,7 +25,7 @@ func main() {
 	g.AddVertex("golf")
 	g.AddVertex("hotel")
 
-    fmt.Println("\nAdding edges...")
+	fmt.Println("\nAdding edges...")
 	g.AddEdge("alpha", "bravo")
 	g.AddEdge("alpha", "charlie")
 	g.AddEdge("charlie", "delta")
@@ -33,7 +33,7 @@ func main() {
 	g.AddEdge("echo", "bravo")
 	g.AddEdge("bravo", "foxtrot")
 
-    fmt.Println("\nDFS Recursive: alpha")
+	fmt.Println("\nDFS Recursive: alpha")
 	r = g.DFSRecursive("alpha")
 	for i, n := range r {
 		fmt.Printf("%d: %s\n", i, n)
@@ -60,4 +60,3 @@ func main() {
 	fmt.Println("\nCreate path:")
 	g.CreatePath("bravo", "echo")
 }
-

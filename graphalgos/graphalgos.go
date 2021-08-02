@@ -1,8 +1,8 @@
-package graph
+package graphalgos
 
 import (
-    "fmt"
-    "strings"
+	"fmt"
+	"strings"
 )
 
 // Graph is the basic structure of the graph.
@@ -77,7 +77,7 @@ func (g Graph) DFSIterative(startingNode string) []string {
 
 	for len(s) > 0 {
 		var current string
-		current, s = s[len(s) - 1], s[:len(s) - 1]
+		current, s = s[len(s)-1], s[:len(s)-1]
 		r = append(r, current)
 		for _, node := range g.adjacency[current] {
 			if !visited[node] {
